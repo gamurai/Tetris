@@ -58,3 +58,7 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+/Tetris/Library/
+/Tetris/Logs/
+/Tetris/Temp/
+/Tetris/obj/
