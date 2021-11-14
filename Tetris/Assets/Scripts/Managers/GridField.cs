@@ -9,7 +9,9 @@ public class GridField : GenericSingleton<GridField>
     private static Transform[,] grid = new Transform[width, height];
 
     public int GetWidth() => width;
+
     public int GetHeight() => height;
+
     public Transform[,] GetGrid() => grid;
 
     public Vector2 RoundVector2(Vector2 v) => new Vector2(Mathf.Round(v.x), Mathf.Round(v.y));
