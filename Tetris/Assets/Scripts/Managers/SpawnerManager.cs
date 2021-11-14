@@ -9,9 +9,17 @@ public class SpawnerManager : GenericSingleton<SpawnerManager>
     [SerializeField]
     private Transform SpawnPoint;
 
-    public void Spawn()
+    public delegate void GroupSpawned(Group group);
+    public static event GroupSpawned OnGroupSpawned;
+
+    public Group Spawn()
     {
         var index = Random.Range(0, Groups.Length);
-        Instantiate(Groups[index], SpawnPoint.position, Quaternion.identity);
+        var newObject = Instantiate(Groups[index], SpawnPoint.position, Quaternion.identity);
+        var group = newObject.GetComponent<Group>();
+
+        OnGroupSpawned(group);
+
+        return group;
     }
 }
