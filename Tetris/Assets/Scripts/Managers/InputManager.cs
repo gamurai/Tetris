@@ -21,7 +21,8 @@ public class InputManager : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.RightArrow)) OnRightPressed();
         // Rotate
         else if (Input.GetKeyDown(KeyCode.UpArrow)) OnUpPressed();
-        // Move Downwards and Fall
+        // Move Downwards
         else if (Input.GetKeyDown(KeyCode.DownArrow)) OnDownPressed();
+        
     }
 }
